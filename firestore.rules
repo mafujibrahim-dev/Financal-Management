@@ -1,0 +1,11 @@
+rules_version = '2';
+// Each user can only read and write their own Money Book data: users/{uid}/{table}/{recordId}
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid}/{table}/{recordId} {
+      allow read, write: if request.auth != null
+        && request.auth.uid == uid
+        && table in ['Accounts', 'Ledger', 'Dues', 'Purchases', 'Namaz', 'Profile', 'Books'];
+    }
+  }
+}

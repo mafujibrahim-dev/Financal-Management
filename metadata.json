@@ -1,0 +1,8 @@
+{
+  "name": "Money Book – Finance & Cloud Sync",
+  "description": "Offline-first personal money book with multi-account ledger, dues, purchases, namaz log, and Google Sheets cloud sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
+
